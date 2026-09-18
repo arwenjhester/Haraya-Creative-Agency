@@ -992,13 +992,24 @@ a {
         grid-template-columns: 1fr;
     }
 
+    /* FIX: Collapses 470vh height void on mobile */
+    .work-section {
+        min-height: auto !important;
+        height: auto !important;
+    }
+
+    .work-intro {
+        min-height: auto !important;
+        padding: 110px 6vw 40px !important;
+    }
+
     /* Campaign Stage Fix (Matches Reference Photo 2 Exactly) */
     .campaign-stage {
         position: relative !important;
-        height: 100vh !important;
-        height: 100svh !important;
-        min-height: 600px !important;
-        padding: 105px 6vw 25px !important;
+        height: auto !important;
+        min-height: calc(100vh - 80px) !important;
+        min-height: calc(100svh - 80px) !important;
+        padding: 30px 6vw 30px !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: flex-start !important;
@@ -1019,7 +1030,7 @@ a {
 
     .campaign-progress {
         position: absolute !important;
-        top: 120px !important; /* Placed right next to content, beneath hamburger */
+        top: 30px !important;
         right: 6vw !important;
         left: auto !important;
         transform: none !important;
@@ -1046,9 +1057,7 @@ a {
         transform: none !important;
         width: 100% !important;
         max-width: none !important;
-        flex: 1 !important; /* Spans smoothly without leaving giant empty bottom gap */
-        max-height: none !important;
-        min-height: 220px !important;
+        height: 280px !important;
         margin-bottom: 20px !important;
     }
 
@@ -1061,7 +1070,7 @@ a {
         justify-content: center !important;
         align-items: center !important;
         gap: 12px !important;
-        margin-top: auto !important;
+        margin-top: 10px !important;
         padding-bottom: 5px !important;
         z-index: 20 !important;
     }
@@ -1163,21 +1172,22 @@ a {
         letter-spacing: 1px;
     }
 
+    /* Work Intro Mobile Layout */
     .work-intro {
-        min-height: 70vh;
-        padding: 100px 7vw 70px;
+        min-height: auto !important;
+        padding: 95px 6vw 30px !important;
     }
 
     .work-intro h2 {
-        margin-top: 25px;
-        font-size: clamp(50px, 16vw, 82px);
+        margin-top: 20px;
+        font-size: clamp(45px, 14vw, 75px);
         line-height: 0.9;
         letter-spacing: -3px;
     }
 
     .work-intro p {
         max-width: 100%;
-        margin-top: 30px;
+        margin-top: 20px;
         margin-left: 0;
         font-size: 14px;
         line-height: 1.55;
@@ -1185,8 +1195,8 @@ a {
 
     /* Campaign Mobile Proportions Fix */
     .campaign-stage {
-        padding: 98px 6vw 20px !important;
-        min-height: 560px !important;
+        padding: 20px 6vw 25px !important;
+        min-height: auto !important;
     }
 
     .campaign-content {
@@ -1227,7 +1237,7 @@ a {
     }
 
     .campaign-progress {
-        top: 112px !important;
+        top: 20px !important;
         right: 6vw !important;
         font-size: 9px !important;
     }
@@ -1237,12 +1247,13 @@ a {
     }
 
     .campaign-image {
-        min-height: 200px !important;
+        height: 230px !important;
         margin-bottom: 16px !important;
     }
 
     .campaign-dots {
         gap: 9px !important;
+        margin-top: 8px !important;
     }
 
     .campaign-dot {
@@ -1252,7 +1263,7 @@ a {
 
     .needs-section {
         min-height: auto;
-        padding: 100px 7vw;
+        padding: 80px 7vw;
     }
 
     .needs-layout {
@@ -1547,17 +1558,16 @@ a {
     }
 
     .campaign-stage {
-        padding: 90px 6vw 18px !important;
-        min-height: 520px !important;
+        padding: 15px 6vw 20px !important;
     }
 
     .campaign-progress {
-        top: 102px !important;
+        top: 15px !important;
         right: 5vw !important;
     }
 
     .campaign-image {
-        min-height: 170px !important;
+        height: 200px !important;
     }
 
     .campaign-content h3 {
