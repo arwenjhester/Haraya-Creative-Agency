@@ -434,7 +434,7 @@ a {
     line-height: 1.6;
 }
 
-/* Campaign Stage (Desktop Base Layout) */
+/* Campaign Stage */
 .campaign-stage {
     position: sticky;
     top: 0;
@@ -992,29 +992,30 @@ a {
         grid-template-columns: 1fr;
     }
 
-    /* FIX: Collapses 470vh height void on mobile */
+    /* REDUCED MOBILE SCROLL TRACK: Eliminates empty space after cards finish */
     .work-section {
-        min-height: auto !important;
-        height: auto !important;
+        min-height: 260vh !important;
     }
 
     .work-intro {
-        min-height: auto !important;
-        padding: 110px 6vw 40px !important;
+        min-height: 50vh !important;
+        padding: 90px 6vw 30px !important;
     }
 
-    /* Campaign Stage Fix (Matches Reference Photo 2 Exactly) */
+    /* PRESERVES STICKY PINNING ON MOBILE */
     .campaign-stage {
-        position: relative !important;
-        height: auto !important;
-        min-height: calc(100vh - 80px) !important;
-        min-height: calc(100svh - 80px) !important;
-        padding: 30px 6vw 30px !important;
+        position: sticky !important;
+        top: 0 !important;
+        height: 100vh !important;
+        height: 100svh !important;
+        min-height: 0 !important;
+        padding: 70px 6vw 25px !important;
         display: flex !important;
         flex-direction: column !important;
-        justify-content: flex-start !important;
+        justify-content: space-between !important;
         align-items: stretch !important;
         box-sizing: border-box !important;
+        overflow: hidden !important;
     }
 
     .campaign-content {
@@ -1024,13 +1025,15 @@ a {
         transform: none !important;
         width: 78vw !important;
         max-width: none !important;
-        margin-bottom: 20px !important;
+        margin-top: 10px !important;
+        margin-bottom: 0 !important;
         z-index: 10 !important;
     }
 
+    /* Vertical Counter (01 - 03) matching photo */
     .campaign-progress {
         position: absolute !important;
-        top: 30px !important;
+        top: 130px !important;
         right: 6vw !important;
         left: auto !important;
         transform: none !important;
@@ -1053,12 +1056,15 @@ a {
         position: relative !important;
         top: auto !important;
         right: auto !important;
+        left: auto !important;
         bottom: auto !important;
         transform: none !important;
         width: 100% !important;
         max-width: none !important;
-        height: 280px !important;
-        margin-bottom: 20px !important;
+        height: 42vh !important;
+        max-height: 320px !important;
+        margin-top: auto !important;
+        margin-bottom: 10px !important;
     }
 
     .campaign-dots {
@@ -1070,8 +1076,7 @@ a {
         justify-content: center !important;
         align-items: center !important;
         gap: 12px !important;
-        margin-top: 10px !important;
-        padding-bottom: 5px !important;
+        margin-bottom: 10px !important;
         z-index: 20 !important;
     }
 }
@@ -1172,10 +1177,9 @@ a {
         letter-spacing: 1px;
     }
 
-    /* Work Intro Mobile Layout */
     .work-intro {
-        min-height: auto !important;
-        padding: 95px 6vw 30px !important;
+        min-height: 45vh !important;
+        padding: 85px 6vw 20px !important;
     }
 
     .work-intro h2 {
@@ -1193,15 +1197,13 @@ a {
         line-height: 1.55;
     }
 
-    /* Campaign Mobile Proportions Fix */
+    /* Campaign Stage Mobile Sizing */
     .campaign-stage {
-        padding: 20px 6vw 25px !important;
-        min-height: auto !important;
+        padding: 60px 6vw 15px !important;
     }
 
     .campaign-content {
         width: 80vw !important;
-        margin-bottom: 16px !important;
     }
 
     .image-placeholder {
@@ -1237,7 +1239,7 @@ a {
     }
 
     .campaign-progress {
-        top: 20px !important;
+        top: 90px !important;
         right: 6vw !important;
         font-size: 9px !important;
     }
@@ -1247,13 +1249,13 @@ a {
     }
 
     .campaign-image {
-        height: 230px !important;
-        margin-bottom: 16px !important;
+        height: 38vh !important;
+        max-height: 250px !important;
     }
 
     .campaign-dots {
         gap: 9px !important;
-        margin-top: 8px !important;
+        margin-bottom: 5px !important;
     }
 
     .campaign-dot {
@@ -1558,16 +1560,16 @@ a {
     }
 
     .campaign-stage {
-        padding: 15px 6vw 20px !important;
+        padding: 50px 6vw 10px !important;
     }
 
     .campaign-progress {
-        top: 15px !important;
+        top: 75px !important;
         right: 5vw !important;
     }
 
     .campaign-image {
-        height: 200px !important;
+        height: 32vh !important;
     }
 
     .campaign-content h3 {
