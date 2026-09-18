@@ -434,7 +434,7 @@ a {
     line-height: 1.6;
 }
 
-/* Campaign Stage (Desktop Base) */
+/* Campaign Stage (Desktop Base Layout) */
 .campaign-stage {
     position: sticky;
     top: 0;
@@ -933,7 +933,7 @@ a {
     background: var(--cream);
 }
 
-/* Responsive: Tablet & Mobile Layout Fixes */
+/* Responsive: Tablet Breakpoint */
 @media (max-width: 900px) {
     .desktop-nav {
         display: none;
@@ -992,75 +992,82 @@ a {
         grid-template-columns: 1fr;
     }
 
-    /* Campaign Stage Fix (Matches Photo 2 Layout) */
+    /* Campaign Stage Fix (Matches Reference Photo 2 Exactly) */
     .campaign-stage {
-        height: 100svh;
-        min-height: 600px;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 110px 6vw 60px;
-        gap: 20px;
+        position: relative !important;
+        height: 100vh !important;
+        height: 100svh !important;
+        min-height: 600px !important;
+        padding: 105px 6vw 25px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: stretch !important;
+        box-sizing: border-box !important;
     }
 
     .campaign-content {
-        position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
-        width: 80vw;
-        max-width: none;
-        margin-bottom: 20px;
-        z-index: 10;
-        order: 1;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        width: 78vw !important;
+        max-width: none !important;
+        margin-bottom: 20px !important;
+        z-index: 10 !important;
     }
 
     .campaign-progress {
-        position: absolute;
-        top: 215px; /* Positions '01' safely below the hamburger icon */
-        right: 6vw;
-        left: auto;
-        transform: none;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        font-size: 11px;
-        letter-spacing: 2px;
-        z-index: 10;
+        position: absolute !important;
+        top: 120px !important; /* Placed right next to content, beneath hamburger */
+        right: 6vw !important;
+        left: auto !important;
+        transform: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 6px !important;
+        font-size: 11px !important;
+        letter-spacing: 2px !important;
+        z-index: 10 !important;
     }
 
     .progress-line {
-        width: 1px;
-        height: 28px;
+        width: 1px !important;
+        height: 32px !important;
+        background: var(--cream) !important;
     }
 
     .campaign-image {
-        position: relative;
-        top: auto;
-        right: auto;
-        bottom: auto;
-        transform: none;
-        width: 100%;
-        max-width: none;
-        flex: 1;
-        min-height: 160px;
-        max-height: 260px;
-        order: 2;
-        margin-top: 0;
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: none !important;
+        flex: 1 !important; /* Spans smoothly without leaving giant empty bottom gap */
+        max-height: none !important;
+        min-height: 220px !important;
+        margin-bottom: 20px !important;
     }
 
     .campaign-dots {
-        position: absolute;
-        bottom: 25px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 20;
+        position: relative !important;
+        bottom: auto !important;
+        left: auto !important;
+        transform: none !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 12px !important;
+        margin-top: auto !important;
+        padding-bottom: 5px !important;
+        z-index: 20 !important;
     }
 }
 
-/* Responsive: Mobile (max-width: 600px) */
+/* Responsive: Mobile Screens (max-width: 600px) */
 @media (max-width: 600px) {
     .section-label {
         font-size: 10px;
@@ -1176,15 +1183,15 @@ a {
         line-height: 1.55;
     }
 
+    /* Campaign Mobile Proportions Fix */
     .campaign-stage {
-        padding: 105px 6vw 55px;
-        gap: 16px;
-        min-height: 560px;
+        padding: 98px 6vw 20px !important;
+        min-height: 560px !important;
     }
 
     .campaign-content {
-        width: 82vw;
-        margin-bottom: 10px;
+        width: 80vw !important;
+        margin-bottom: 16px !important;
     }
 
     .image-placeholder {
@@ -1220,23 +1227,22 @@ a {
     }
 
     .campaign-progress {
-        top: 195px; /* Safely placed beneath menu icon */
-        right: 6vw;
-        font-size: 9px;
+        top: 112px !important;
+        right: 6vw !important;
+        font-size: 9px !important;
     }
 
     .progress-line {
-        height: 24px;
+        height: 24px !important;
     }
 
     .campaign-image {
-        min-height: 150px;
-        max-height: 230px;
+        min-height: 200px !important;
+        margin-bottom: 16px !important;
     }
 
     .campaign-dots {
-        bottom: 20px;
-        gap: 9px;
+        gap: 9px !important;
     }
 
     .campaign-dot {
@@ -1541,18 +1547,17 @@ a {
     }
 
     .campaign-stage {
-        padding: 95px 6vw 50px;
-        gap: 12px;
+        padding: 90px 6vw 18px !important;
+        min-height: 520px !important;
     }
 
     .campaign-progress {
-        top: 175px;
-        right: 5vw;
+        top: 102px !important;
+        right: 5vw !important;
     }
 
     .campaign-image {
-        min-height: 130px;
-        max-height: 180px;
+        min-height: 170px !important;
     }
 
     .campaign-content h3 {
