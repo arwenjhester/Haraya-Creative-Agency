@@ -550,7 +550,7 @@ a {
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
-    z-index: 10;
+    z-index: 20;
 }
 
 .campaign-dot {
@@ -994,29 +994,29 @@ a {
 
     .campaign-stage {
         height: 100svh;
-        min-height: 650px;
+        min-height: 580px;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: flex-start;
-        padding: 125px 7vw 30px;
-        gap: 12px;
+        padding: 90px 7vw 65px;
+        gap: 20px;
     }
 
     .campaign-image {
         position: relative;
         width: 100%;
         max-width: none;
-        height: 25svh;
-        min-height: 150px;
-        max-height: 220px;
+        flex: 1;
+        min-height: 160px;
+        max-height: 260px;
         left: auto;
         right: auto;
         top: auto;
         bottom: auto;
         transform: none;
         order: 2;
-        margin-top: 5px;
+        margin-top: 0;
     }
 
     .campaign-content {
@@ -1030,15 +1030,22 @@ a {
         transform: none;
         order: 1;
         margin-bottom: 0;
+        flex-shrink: 0;
     }
 
     .campaign-progress {
-        top: 25%;
+        top: 110px;
         left: auto;
         right: 5vw;
-        transform: translateY(-50%) rotate(90deg);
+        transform: rotate(90deg);
+        transform-origin: right top;
         gap: 9px;
         font-size: 9px;
+    }
+
+    .campaign-dots {
+        bottom: 22px;
+        z-index: 20;
     }
 }
 
@@ -1160,29 +1167,29 @@ a {
 
     .campaign-stage {
         height: 100svh;
-        min-height: 650px;
+        min-height: 560px;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: flex-start;
-        padding: 125px 7vw 30px;
-        gap: 12px;
+        padding: 85px 7vw 60px;
+        gap: 16px;
     }
 
     .campaign-image {
         position: relative;
         width: 100%;
         max-width: none;
-        height: 22svh;
-        min-height: 140px;
-        max-height: 200px;
+        flex: 1;
+        min-height: 150px;
+        max-height: 230px;
         left: auto;
         right: auto;
         top: auto;
         bottom: auto;
         transform: none;
         order: 2;
-        margin-top: 5px;
+        margin-top: 0;
     }
 
     .campaign-content {
@@ -1196,6 +1203,7 @@ a {
         transform: none;
         order: 1;
         margin-bottom: 0;
+        flex-shrink: 0;
     }
 
     .image-placeholder {
@@ -1209,32 +1217,33 @@ a {
     }
 
     .campaign-content h3 {
-        margin-top: 10px;
+        margin-top: 8px;
         max-width: 100%;
-        font-size: clamp(38px, 11.5vw, 60px);
+        font-size: clamp(36px, 10.5vw, 56px);
         line-height: 0.9;
         letter-spacing: -2px;
     }
 
     .campaign-content p {
         max-width: 100%;
-        margin-top: 14px;
+        margin-top: 10px;
         font-size: 12.5px;
-        line-height: 1.5;
+        line-height: 1.45;
     }
 
     .campaign-category {
-        margin-top: 14px;
-        padding: 7px 11px;
+        margin-top: 10px;
+        padding: 6px 11px;
         font-size: 7.5px;
         letter-spacing: 1.2px;
     }
 
     .campaign-progress {
-        top: 25%;
+        top: 95px;
         left: auto;
         right: 5vw;
-        transform: translateY(-50%) rotate(90deg);
+        transform: rotate(90deg);
+        transform-origin: right top;
         gap: 9px;
         font-size: 9px;
     }
@@ -1244,8 +1253,9 @@ a {
     }
 
     .campaign-dots {
-        bottom: 28px;
+        bottom: 20px;
         gap: 9px;
+        z-index: 20;
     }
 
     .campaign-dot {
@@ -1550,18 +1560,17 @@ a {
     }
 
     .campaign-stage {
-        padding: 110px 7vw 30px;
-        gap: 10px;
+        padding: 80px 7vw 55px;
+        gap: 12px;
     }
 
     .campaign-image {
-        height: 20svh;
-        min-height: 120px;
-        max-height: 160px;
+        min-height: 130px;
+        max-height: 180px;
     }
 
     .campaign-content h3 {
-        font-size: clamp(34px, 10.5vw, 48px);
+        font-size: clamp(32px, 10vw, 46px);
         letter-spacing: -1.5px;
     }
 
@@ -1571,10 +1580,11 @@ a {
 
     .campaign-category {
         font-size: 7px;
-        padding: 6px 9px;
+        padding: 5px 9px;
     }
 
     .campaign-progress {
+        top: 85px;
         right: 4vw;
     }
 
